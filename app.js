@@ -10,8 +10,6 @@ env(__dirname + '/.env')
 
 const giphy = require('giphy-api')(giphyAPI)
 
-var mainWindow = null;
-
 app.on('ready', function () {
 
     windowManager.init({
