@@ -1,28 +1,80 @@
 <!doctype html>
     <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 <style>
     
     body {
         background-color: #f7f7f9;
     }
     
-    .strip {
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .container {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
     }
     
+    .col-1 {
+        grid-column-start: span 1;
+        grid-row-end: span 1
+    }
+    
+    .col-2 {
+        grid-column-start: span 2;
+    }
+    
+    .col-3 {
+        grid-column-start: span 3;
+    }
+    
+    .col-4 {
+        grid-column-start: span 4;
+    }
+    
+    .col-5 {
+        grid-column-start: span 5;
+    }
+    
+    .col-6 {
+        grid-column-start: span 6;
+    }
+    
+    .col-7 {
+        grid-column-start: span 7;
+    }
+    
+    .col-8 {
+        grid-column-start: span 8;
+    }
+    
+    .col-9 {
+        grid-column-start: span 9;
+    }
+    
+    .col-10 {
+        grid-column-start: span 10;
+    }
+    
+    .col-11 {
+        grid-column-start: span 11;
+    }
+        
+    .col-12 {
+        grid-column-start: span 12;
+    }
     .api-view {
-        display: block;
-        width: 100%;
-        height: 100px;
         border: 1px solid #ced4da;
-        height: 5%;
+        height: 100%;
+    }
+    
+    .api-preview {
+                border: 1px solid #ced4da;
+    
+        grid-row-end: span 1;
     }
 
-    .search-box {
-    display: block;
+    .search-box {   
     width: 100%;
     padding: .375rem .75rem;
     font-size: 1rem;
