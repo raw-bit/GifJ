@@ -1,100 +1,107 @@
 <!doctype html>
-    <html lang="en">
+<html lang="en">
+
 <head>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
-<style>
-    
-    body {
-        background-color: #f7f7f9;
-    }
-    
-    .container {
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 1fr;
-    }
-    
-    .col-1 {
-        grid-column-start: span 1;
-        grid-row-end: span 1
-    }
-    
-    .col-2 {
-        grid-column-start: span 2;
-    }
-    
-    .col-3 {
-        grid-column-start: span 3;
-    }
-    
-    .col-4 {
-        grid-column-start: span 4;
-    }
-    
-    .col-5 {
-        grid-column-start: span 5;
-    }
-    
-    .col-6 {
-        grid-column-start: span 6;
-    }
-    
-    .col-7 {
-        grid-column-start: span 7;
-    }
-    
-    .col-8 {
-        grid-column-start: span 8;
-    }
-    
-    .col-9 {
-        grid-column-start: span 9;
-    }
-    
-    .col-10 {
-        grid-column-start: span 10;
-    }
-    
-    .col-11 {
-        grid-column-start: span 11;
-    }
+    <style>
+        body {
+            background-color: #f7f7f9;
+        }
         
-    .col-12 {
-        grid-column-start: span 12;
-    }
-    .api-view {
-        border: 1px solid #ced4da;
-        height: 100%;
-    }
-    
-    .api-preview {
-                border: 1px solid #ced4da;
-    
-        grid-row-end: span 1;
-    }
-
-    .search-box {   
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-        outline: none;
-    }
-    
+        .container {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(6, 50px);
+        }
+        
+        .col-1 {
+            grid-column-start: span 1;
+        }
+        
+        .col-2 {
+            grid-column-start: span 2;
+        }
+        
+        .col-3 {
+            grid-column-start: span 3;
+        }
+        
+        .col-4 {
+            grid-column-start: span 4;
+        }
+        
+        .col-5 {
+            grid-column-start: span 5;
+        }
+        
+        .col-6 {
+            grid-column-start: span 6;
+        }
+        
+        .col-7 {
+            grid-column-start: span 7;
+        }
+        
+        .col-8 {
+            grid-column-start: span 8;
+        }
+        
+        .col-9 {
+            grid-column-start: span 9;
+        }
+        
+        .col-10 {
+            grid-column-start: span 10;
+        }
+        
+        .col-11 {
+            grid-column-start: span 11;
+        }
+        
+        .col-12 {
+            grid-column-start: span 12;
+        }
+        
+        .btn-box {
+            padding: 15px;
+        }
+        
+        .btn {
+            background-color: aqua;
+        }
+        
+        .api-view {
+            border: 1px solid #ced4da;
+            grid-row-end: span 2;
+        }
+        
+        .api-preview {
+            border: 1px solid #ced4da;
+            grid-row-end: span 4;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            outline: none;
+        }
     </style>
-    </head>
-    <body>
-        
-        {{content}}
-        
-        <script>
-            
-        </script>
-    </body>
-    </html>
+</head>
+
+<body>
+
+    {{content}}
+
+    <script>
+    </script>
+</body>
+
+</html>
