@@ -7,7 +7,6 @@ const app = electron.app
 const ipcMain = require('electron').ipcMain;
 
 const windowManager = require('electron-window-manager')
-const giphyAPI = process.env.GIFYAPI
 env(__dirname + '/.env')
 
 const request = require('request')
@@ -56,11 +55,11 @@ app.on('ready', function () {
     ipcMain.on('search', function (event, data) {
         console.log(giphyAPI)
         if (!data == "") {
-            let reqUrl = 'http://api.giphy.com/v1/gifs/search?q=' + data + '&api_key=' + giphyAPI
+            let reqUrl = 'http://api.giphy.com/v1/gifs/search?q=' + data + '&api_key=' + process.env.GIFYAPI
             request(reqUrl, function (error, response, body) {
-                console.log('error:', error); // Print the error if one occurred
-                console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-                console.log('body:', body); // Print the HTML for the Google homepage.
+                console.log('error:', error)
+                console.log('statusCode:', response && response.statusCode)
+                console.log('body:', body)
             });
 
         }
