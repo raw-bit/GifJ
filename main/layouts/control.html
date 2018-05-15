@@ -1,11 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
     <style>
         body {
             background-color: #f7f7f9;
+            font-family: 'Lato', sans-serif;
         }
         
         .container {
@@ -73,11 +75,13 @@
             border: none;
             width: 100%;
             height: 100%;
+            border-radius: .25rem
         }
         
         .api-view {
             border: 1px solid #ced4da;
             grid-row-end: span 1;
+            cursor: pointer;
         }
         
         .api-preview {
@@ -86,11 +90,14 @@
         }
         
         .key-view {
+            font-size: 16px;
             border: 1px solid #ced4da;
             grid-row-end: span 1;
             color: #fff;
             background-color: #7b7b7c;
             text-align: center;
+            padding-top: 50%;
+            padding-bottom: 50%;
         }
         
         .search-box {
@@ -103,7 +110,7 @@
             background-clip: padding-box;
             border: 1px solid #ced4da;
             border-radius: .25rem;
-            outline: none;
+            outline: none; 
         }
     </style>
 </head>
@@ -113,6 +120,15 @@
     {{content}}
 
     <script>
+        
+        const ipcRenderer = require('electron').ipcRenderer;
+        
+        document.getElementById("searchBtn").addEventListener("click", function(){
+            var searchString = document.getElementById("searchBox").value;
+            ipcRenderer.send('search', searchString);
+            alert("pressed");
+        })
+        
     </script>
 </body>
 

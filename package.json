@@ -13,8 +13,9 @@
     "electron-prebuilt": "^1.4.13"
   },
   "dependencies": {
+    "electron-ipc": "^0.3.0",
     "electron-window-manager": "^1.0.6",
-    "giphy-api": "^1.2.7",
-    "node-env-file": "^0.1.8"
+    "node-env-file": "^0.1.8",
+    "request": "^2.86.0"
   }
 }
