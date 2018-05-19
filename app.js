@@ -61,7 +61,7 @@ app.on('ready', function () {
 
     ipcPlusM.on('search', function (event, message) {
         if (!message == "") {
-            let reqUrl = 'http://api.giphy.com/v1/gifs/search?q=' + message + '&api_key=' + process.env.GIFYAPI + '&limit=50'
+            let reqUrl = 'http://api.giphy.com/v1/gifs/search?q=' + message + '&api_key=' + process.env.GIFYAPI + '&limit=54'
             request(reqUrl, function (error, response, body) {
                 //console.log('error:', error)
                 //console.log('statusCode:', response && response.statusCode)
@@ -69,7 +69,9 @@ app.on('ready', function () {
                 let obj = JSON.parse(body)
                 let limit = obj.data.length
                 for (let i = 0; i < limit; i++) {
-                    result.push(obj.data[i].images.original.url)
+                    let still = obj.data[i].images.original_still.url
+                    let gif = obj.data[i].images.original.url
+                    result.push([still, gif])
                 }
                 event.reply(null, result)
             })
