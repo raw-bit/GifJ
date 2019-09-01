@@ -49,5 +49,8 @@ main.js.map
 
 .idea
 npm-debug.log.*
+__snapshots__
 
-package-lock.json
+# Package.json
+package.json
+.travis.yml
